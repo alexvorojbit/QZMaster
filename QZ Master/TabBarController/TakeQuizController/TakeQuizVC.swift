@@ -74,7 +74,7 @@ class TakeQuizVC: UIViewController, UICollectionViewDelegate {
                 case .success(let sections):
                     DispatchQueue.main.async {
                         self.section.append(contentsOf: sections)
-                        self.reloadData(on: self.section)
+                        self.reloadData()
                         print("SUCCESS")
                     }
                 case .failure(let error):
@@ -100,31 +100,15 @@ class TakeQuizVC: UIViewController, UICollectionViewDelegate {
                 return cell
             }
         }
-
-        dataSource.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
-            guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.identifier, for: indexPath) as? SectionHeader else {
-                return nil
-            }
-
-            guard let firstItem = self?.dataSource.itemIdentifier(for: indexPath) else { return nil }
-            guard let section = self?.dataSource.snapshot().sectionIdentifier(containingItem: firstItem) else { return nil }
-            if section.title.isEmpty { return nil }
-
-            sectionHeader.titleLabel.text = section.title
-//            sectionHeader.subtitleLabel.text = section.subtitle
-            return sectionHeader
-        }
     }
     
 
-    func reloadData(on _: [Section]) {
+    func reloadData() {
         snapshot.appendSections(section)
-
         for sections in section {
             snapshot.appendItems(sections.items, toSection: sections)
-            
         }
-        DispatchQueue.main.async { self.dataSource.apply(self.snapshot, animatingDifferences: true) }
+        DispatchQueue.main.async { self.dataSource.apply(self.snapshot, animatingDifferences: false) }
     }
     
     

@@ -12,7 +12,7 @@ class TakeQuizSingleQuizCell: UICollectionViewCell {
     var takeQuizItems: SectionItems? {
         didSet {
             nameLabel.text = takeQuizItems?.sectionName
-            imageView.loadImageUsingCacheWithUrlString(urlString: takeQuizItems?.image ?? "")
+            imageView.loadImageUsingCacheWithUrlString(urlString: takeQuizItems?.sectionImage ?? "")
         }
     }
     

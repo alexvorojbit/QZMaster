@@ -9,11 +9,18 @@ import UIKit
 
 class TakeQuizMultipleQuizCell: UICollectionViewCell {
     
+    let section = [Section]()
+    
     var takeQuizItems: SectionItems? {
         didSet {
             sectionName.text = takeQuizItems?.sectionName
-            quizName.text = takeQuizItems?.quizName
-            imageView.loadImageUsingCacheWithUrlString(urlString: takeQuizItems?.image ?? "")
+            
+            for section in section {
+                let items = section.items
+                multipleQuizController.quizes = items
+            }
+            
+            multipleQuizController.collectionView.reloadData()
         }
     }
     
@@ -26,31 +33,8 @@ class TakeQuizMultipleQuizCell: UICollectionViewCell {
         label.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         return label
     }()
-
-    let imageView: UIImageView = {
-        let img = UIImageView()
-//        img.contentMode = .scaleAspectFit
-        img.layer.cornerRadius = 16
-        img.clipsToBounds = true
-        img.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        return img
-    }()
     
-    let quizName: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.preferredFont(forTextStyle: .title3).bold()
-        label.adjustsFontForContentSizeCategory = true
-        label.textColor = .label
-        label.textAlignment = .center
-        return label
-    }()
-    
-    let playButton: UIButton = {
-        let button = UIButton(type: .custom)
-        button.setImage(SFSymbols.playButton, for: .normal)
-        button.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        return button
-    }()
+    let multipleQuizController = TakeQuizMultipleQuizController(mode: .small)
 
 
     // Initialiser
@@ -67,19 +51,13 @@ class TakeQuizMultipleQuizCell: UICollectionViewCell {
     /// Sets up the UI components for this cell and adds them to the contentview
     private func setupViews() {
         
-        let stackViewHorizontal = UIStackView(arrangedSubviews: [imageView, quizName, playButton])
-        stackViewHorizontal.translatesAutoresizingMaskIntoConstraints = false
-        stackViewHorizontal.spacing = 10
-        addSubview(stackViewHorizontal)
+        let stackView = VerticalStackView(arrangedSubviews: [
+            sectionName,
+            multipleQuizController.view
+            ], spacing: 12)
         
-        let stackViewVertical = VerticalStackView(arrangedSubviews: [sectionName, stackViewHorizontal])
-        addSubview(stackViewVertical)
-//        stackViewVertical.alignment = .center
-        stackViewVertical.fillSuperview(padding: .init(top: 0, left: 0, bottom: 0, right: 24))
-        
-//        NSLayoutConstraint.activate([
-//            sectionName.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
-//        ])
+        addSubview(stackView)
+        stackView.fillSuperview(padding: .init(top: 24, left: 24, bottom: 24, right: 24))
     }
 
 

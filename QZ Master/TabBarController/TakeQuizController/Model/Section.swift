@@ -8,18 +8,17 @@
 
 import Foundation
 
-// Describes the info needed for a Section
 struct Section: Decodable, Hashable {
     let type: String
-    let title: String
     let items: [SectionItems]
 }
 
 struct SectionItems: Decodable, Hashable {
     let sectionName: String?
+    let sectionImage: String?
+    let id: String?
     let quizName: String?
-    let image: String?
-//    let quizes: [Quizes]
+    let quizImage: String?
 }
 
 //struct Quizes: Decodable, Hashable {
