@@ -11,7 +11,7 @@ class BaseListController: UICollectionViewController {
     
     init() {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
-        collectionView.backgroundColor = .systemRed
+//        collectionView.backgroundColor = .systemGreen
     }
     
     required init?(coder aDecoder: NSCoder) {

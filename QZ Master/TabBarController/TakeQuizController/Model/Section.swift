@@ -10,19 +10,12 @@ import Foundation
 
 struct Section: Decodable, Hashable {
     let type: String
-    let items: [SectionItems]
+    var sectionName: String
+    let sectionImage: String?
+    let quizes: [SectionItems]
 }
 
 struct SectionItems: Decodable, Hashable {
-    let sectionName: String?
-    let sectionImage: String?
-    let id: String?
-    let quizName: String?
-    let quizImage: String?
+    let quizName: String
+    let image: String
 }
-
-//struct Quizes: Decodable, Hashable {
-//    let id: String
-//    let name: String
-//    let image: String?
-//}

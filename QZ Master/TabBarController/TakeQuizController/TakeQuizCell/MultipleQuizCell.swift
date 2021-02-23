@@ -12,7 +12,7 @@ class MultipleQuizCell: UICollectionViewCell {
     var quizes: SectionItems? {
         didSet {
             nameLabel.text = quizes?.quizName
-            imageView.loadImageUsingCacheWithUrlString(urlString: quizes?.quizImage ?? "")
+            imageView.loadImageUsingCacheWithUrlString(urlString: quizes?.image ?? "")
         }
     }
     
@@ -33,13 +33,13 @@ class MultipleQuizCell: UICollectionViewCell {
         label.adjustsFontForContentSizeCategory = true
         label.textColor = .label
         label.textAlignment = .left
-//        label.translatesAutoresizingMaskIntoConstraints = false
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     let playButton: UIButton = {
         let button = UIButton(type: .custom)
-        button.setImage(UIImage(systemName: "icloud.and.arrow.down"), for: .normal)
+        button.setImage(SFSymbols.playButton, for: .normal)
         button.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -56,11 +56,9 @@ class MultipleQuizCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = UIColor.systemGray6
+//        backgroundColor = .systemGreen
         layer.cornerRadius = 16
         clipsToBounds = true
-        
-        setupViews()
        
         imageView.backgroundColor = .purple
         imageView.constrainWidth(constant: 64)
@@ -69,6 +67,8 @@ class MultipleQuizCell: UICollectionViewCell {
         playButton.backgroundColor = UIColor(white: 0.95, alpha: 1)
         playButton.constrainWidth(constant: 44)
         playButton.constrainHeight(constant: 44)
+        
+        setupViews()
     }
     
     // Sets up the UI components for this cell and adds them to the contentview
@@ -82,7 +82,7 @@ class MultipleQuizCell: UICollectionViewCell {
         stackView.fillSuperview()
         
         addSubview(separatorView)
-        separatorView.anchor(top: nil, leading: nameLabel.leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: -8, right: 0), size: .init(width: 0, height: 0.5))
+        separatorView.anchor(top: nil, leading: imageView.leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: -8, right: 0), size: .init(width: 0, height: 0.5))
         
     }
     

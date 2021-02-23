@@ -7,9 +7,9 @@
 
 import UIKit
 
-class TakeQuizSingleQuizCell: UICollectionViewCell {
+class TakeQuizSingleQuizCell: BaseTakeQuizCell {
     
-    var takeQuizItems: SectionItems? {
+    override var takeQuizItems: Section? {
         didSet {
             nameLabel.text = takeQuizItems?.sectionName
             imageView.loadImageUsingCacheWithUrlString(urlString: takeQuizItems?.sectionImage ?? "")
@@ -41,10 +41,11 @@ class TakeQuizSingleQuizCell: UICollectionViewCell {
     // Initializer
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupViews()
-        backgroundColor = UIColor.systemGray6
+        
+//        backgroundColor = UIColor.systemRed
         layer.cornerRadius = 16
         clipsToBounds = true
+        setupViews()
     }
     
     // Sets up the UI components for this cell and adds them to the contentview

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA25050D25B08159002F3116 /* ItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25050C25B08159002F3116 /* ItemDetails.swift */; };
 		FA3D203625AC63D200024C85 /* QuizFullscreenHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D203525AC63D200024C85 /* QuizFullscreenHeaderCell.swift */; };
 		FA3D203B25AC64E000024C85 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D203A25AC64E000024C85 /* UIView+Layout.swift */; };
 		FA3D204025AC651E00024C85 /* QuizFullscreenDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D203F25AC651E00024C85 /* QuizFullscreenDescriptionCell.swift */; };
@@ -46,13 +45,11 @@
 		FAC4CF6E258B5B4B00D5ABA7 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4CF6D258B5B4B00D5ABA7 /* Labels.swift */; };
 		FAC4CF8E258F7DB000D5ABA7 /* CreateQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4CF8D258F7DB000D5ABA7 /* CreateQuizVC.swift */; };
 		FAC4D07525913C9C00D5ABA7 /* TakeQuizSingleQuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4D06525913C9C00D5ABA7 /* TakeQuizSingleQuizCell.swift */; };
-		FAC4D07625913C9C00D5ABA7 /* EducationalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4D06625913C9C00D5ABA7 /* EducationalCell.swift */; };
 		FAC4D07825913C9C00D5ABA7 /* MultipleQuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4D06825913C9C00D5ABA7 /* MultipleQuizCell.swift */; };
 		FAC4D07925913C9C00D5ABA7 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4D06A25913C9C00D5ABA7 /* SectionHeader.swift */; };
 		FAC4D07D25913C9C00D5ABA7 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4D06F25913C9C00D5ABA7 /* Section.swift */; };
 		FAC4D07E25913C9C00D5ABA7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4D07125913C9C00D5ABA7 /* NetworkManager.swift */; };
 		FAC4D07F25913C9C00D5ABA7 /* TakeQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4D07225913C9C00D5ABA7 /* TakeQuizVC.swift */; };
-		FAC4D0A72591452C00D5ABA7 /* TvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4D0992591452C00D5ABA7 /* TvCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +70,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA25050C25B08159002F3116 /* ItemDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetails.swift; sourceTree = "<group>"; };
 		FA3D203525AC63D200024C85 /* QuizFullscreenHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizFullscreenHeaderCell.swift; sourceTree = "<group>"; };
 		FA3D203A25AC64E000024C85 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		FA3D203F25AC651E00024C85 /* QuizFullscreenDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizFullscreenDescriptionCell.swift; sourceTree = "<group>"; };
@@ -118,13 +114,11 @@
 		FAC4CF6D258B5B4B00D5ABA7 /* Labels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		FAC4CF8D258F7DB000D5ABA7 /* CreateQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuizVC.swift; sourceTree = "<group>"; };
 		FAC4D06525913C9C00D5ABA7 /* TakeQuizSingleQuizCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeQuizSingleQuizCell.swift; sourceTree = "<group>"; };
-		FAC4D06625913C9C00D5ABA7 /* EducationalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationalCell.swift; sourceTree = "<group>"; };
 		FAC4D06825913C9C00D5ABA7 /* MultipleQuizCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleQuizCell.swift; sourceTree = "<group>"; };
 		FAC4D06A25913C9C00D5ABA7 /* SectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		FAC4D06F25913C9C00D5ABA7 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		FAC4D07125913C9C00D5ABA7 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FAC4D07225913C9C00D5ABA7 /* TakeQuizVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeQuizVC.swift; sourceTree = "<group>"; };
-		FAC4D0992591452C00D5ABA7 /* TvCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,8 +301,6 @@
 				FA6C35B125BC4DC500B81D59 /* TakeQuizMultipleQuizCell.swift */,
 				FAC4D06825913C9C00D5ABA7 /* MultipleQuizCell.swift */,
 				FA6C35D825BF990A00B81D59 /* BaseTakeQuizCell.swift */,
-				FAC4D06625913C9C00D5ABA7 /* EducationalCell.swift */,
-				FAC4D0992591452C00D5ABA7 /* TvCell.swift */,
 			);
 			path = TakeQuizCell;
 			sourceTree = "<group>";
@@ -325,7 +317,6 @@
 			isa = PBXGroup;
 			children = (
 				FAC4D06F25913C9C00D5ABA7 /* Section.swift */,
-				FA25050C25B08159002F3116 /* ItemDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -469,7 +460,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4A5C1F258134F200D60BF2 /* UserInApp.swift in Sources */,
-				FAC4D0A72591452C00D5ABA7 /* TvCell.swift in Sources */,
 				FA4A5C262581352C00D60BF2 /* HomeVC.swift in Sources */,
 				FA3D203B25AC64E000024C85 /* UIView+Layout.swift in Sources */,
 				FA6C35D925BF990A00B81D59 /* BaseTakeQuizCell.swift in Sources */,
@@ -501,10 +491,8 @@
 				FA3D203625AC63D200024C85 /* QuizFullscreenHeaderCell.swift in Sources */,
 				FAC4CF65258B5B0F00D5ABA7 /* SelfConfiguringCell.swift in Sources */,
 				FAC4CF66258B5B0F00D5ABA7 /* UIScrollView+.swift in Sources */,
-				FAC4D07625913C9C00D5ABA7 /* EducationalCell.swift in Sources */,
 				FAC4CF62258B5B0F00D5ABA7 /* UIImageViewCache.swift in Sources */,
 				FAAAA73F25AC4C7400C1B4DB /* QuizFullscreenController.swift in Sources */,
-				FA25050D25B08159002F3116 /* ItemDetails.swift in Sources */,
 				FA633ED52554AD7F003CACD7 /* AppDelegate.swift in Sources */,
 				FAC4CF61258B5B0F00D5ABA7 /* Extensions.swift in Sources */,
 				FA633ED72554AD7F003CACD7 /* SceneDelegate.swift in Sources */,

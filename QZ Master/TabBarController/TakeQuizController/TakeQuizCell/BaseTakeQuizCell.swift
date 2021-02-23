@@ -9,7 +9,7 @@ import UIKit
 
 class BaseTakeQuizCell: UICollectionViewCell {
     
-    var takeQuizItems: SectionItems?
+    var takeQuizItems: Section!
     
     override var isHighlighted: Bool {
         didSet {

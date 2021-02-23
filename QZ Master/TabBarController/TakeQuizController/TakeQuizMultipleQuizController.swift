@@ -149,12 +149,12 @@ class TakeQuizMultipleQuizController: BaseListController {
     private let spacing: CGFloat = 16
     private let mode: Mode
     
-    var quizes: [SectionItems] = [] { didSet { collectionView.reloadData() } }
+    var quizes = [SectionItems]()
     
     // MARK: - UI
     private let closeButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(#imageLiteral(resourceName: "close-button"), for: .normal)
+        button.setImage(SFSymbols.closeButton, for: .normal)
         button.tintColor = .darkGray
         button.addTarget(self, action: #selector(handleDismiss), for: .touchUpInside)
         return button
@@ -197,12 +197,11 @@ class TakeQuizMultipleQuizController: BaseListController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch mode {
-        case .small:
-            return min(3, quizes.count)
-        case .fullScreen:
+        if mode == .fullScreen {
             return quizes.count
         }
+        
+        return min(4, quizes.count)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

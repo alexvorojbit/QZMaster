@@ -7,19 +7,15 @@
 
 import UIKit
 
-class TakeQuizMultipleQuizCell: UICollectionViewCell {
+class TakeQuizMultipleQuizCell: BaseTakeQuizCell {
     
-    let section = [Section]()
+//    var section: Section?
     
-    var takeQuizItems: SectionItems? {
+    override var takeQuizItems: Section! {
         didSet {
-            sectionName.text = takeQuizItems?.sectionName
+            sectionName.text = takeQuizItems.sectionName
             
-            for section in section {
-                let items = section.items
-                multipleQuizController.quizes = items
-            }
-            
+            multipleQuizController.quizes = takeQuizItems.quizes
             multipleQuizController.collectionView.reloadData()
         }
     }
@@ -40,11 +36,9 @@ class TakeQuizMultipleQuizCell: UICollectionViewCell {
     // Initialiser
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupViews()
         backgroundColor = .systemGray6
         layer.cornerRadius = 16
-        clipsToBounds = true
-        
+        setupViews()
     }
 
 

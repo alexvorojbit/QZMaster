@@ -16,6 +16,7 @@ class QuizFullscreenHeaderCell: UITableViewCell {
         
         addSubview(takeQuizSingleAppCell)
         takeQuizSingleAppCell.fillSuperview()
+        layer.cornerRadius = 0
     }
     
     required init?(coder aDecoder: NSCoder) {
